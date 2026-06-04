@@ -2,9 +2,14 @@
 
 import { useState, useMemo } from "react";
 import { Search, X, MapPin, Store, ArrowLeft, List } from "lucide-react";
+import dynamic from "next/dynamic";
 import { LOCATIONS } from "@/data/locations";
-import { GoogleMap } from "@/components/GoogleMap";
 import { LocationCard } from "@/components/LocationCard";
+
+const GoogleMap = dynamic(
+  () => import("@/components/GoogleMap").then((m) => ({ default: m.GoogleMap })),
+  { ssr: false, loading: () => <div className="w-full h-full" style={{ background: "#E2D9CC" }} /> }
+);
 import { LocationDetail } from "@/components/LocationDetail";
 import { JoinPage } from "@/components/JoinPage";
 

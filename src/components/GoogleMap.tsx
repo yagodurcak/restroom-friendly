@@ -106,7 +106,7 @@ export function GoogleMap({ locations, selected, onSelect }: GoogleMapProps) {
             content: markerEl,
           });
 
-          marker.addListener("click", () => onSelect(loc.id));
+          marker.addListener("gmp-click", () => onSelect(loc.id));
           markersRef.current.set(loc.id, marker);
         });
       } catch (e) {
