@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import { Search, X, MapPin, Store, ArrowLeft, List } from "lucide-react";
 import { LOCATIONS } from "@/data/locations";
-import { MapMock } from "@/components/MapMock";
+import { GoogleMap } from "@/components/GoogleMap";
 import { LocationCard } from "@/components/LocationCard";
 import { LocationDetail } from "@/components/LocationDetail";
 import { JoinPage } from "@/components/JoinPage";
@@ -259,7 +259,7 @@ export default function Home() {
           <div className="flex-1 overflow-hidden relative">
             {mobileView === "map" ? (
               <div className="h-full">
-                <MapMock locations={filteredLocations} selected={selectedId} onSelect={handleSelect} />
+                <GoogleMap locations={filteredLocations} selected={selectedId} onSelect={handleSelect} />
                 {selectedId && selectedLocation && !showDetail && (
                   <div className="absolute bottom-4 left-4 right-4" style={{ zIndex: 20 }}>
                     <LocationCard location={selectedLocation} onClick={() => setShowDetail(true)} compact />
@@ -360,7 +360,7 @@ export default function Home() {
 
         {/* ── Map (full remaining width) ── */}
         <div className="flex-1 relative">
-          <MapMock
+          <GoogleMap
             locations={filteredLocations}
             selected={selectedId}
             onSelect={handleSelect}
