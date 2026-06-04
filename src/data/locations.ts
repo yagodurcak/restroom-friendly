@@ -1,0 +1,136 @@
+export interface Location {
+  id: number;
+  name: string;
+  type: string;
+  address: string;
+  distance: string;
+  rating: number;
+  hours: string;
+  isOpen: boolean;
+  amenities: string[];
+  x: number;
+  y: number;
+  reviews: number;
+  phone?: string;
+}
+
+export const LOCATIONS: Location[] = [
+  {
+    id: 1,
+    name: "Café San Martín",
+    type: "Café",
+    address: "Av. San Martín 847",
+    distance: "80m",
+    rating: 4.8,
+    hours: "7:00 – 22:00",
+    isOpen: true,
+    amenities: ["accessible", "gender-neutral"],
+    x: 38,
+    y: 34,
+    reviews: 142,
+    phone: "+54 11 4312-0041",
+  },
+  {
+    id: 2,
+    name: "Farmacia del Centro",
+    type: "Farmacia",
+    address: "Corrientes 1203",
+    distance: "210m",
+    rating: 4.5,
+    hours: "8:00 – 21:00",
+    isOpen: true,
+    amenities: ["accessible"],
+    x: 58,
+    y: 42,
+    reviews: 89,
+    phone: "+54 11 4322-5500",
+  },
+  {
+    id: 3,
+    name: "Librería Última Página",
+    type: "Librería",
+    address: "Florida 340",
+    distance: "350m",
+    rating: 4.9,
+    hours: "9:00 – 20:00",
+    isOpen: true,
+    amenities: ["gender-neutral", "baby-changing"],
+    x: 30,
+    y: 58,
+    reviews: 217,
+    phone: "+54 11 4311-8800",
+  },
+  {
+    id: 4,
+    name: "Supermercado Día",
+    type: "Supermercado",
+    address: "Rivadavia 1551",
+    distance: "480m",
+    rating: 4.1,
+    hours: "7:00 – 23:00",
+    isOpen: true,
+    amenities: ["accessible", "baby-changing"],
+    x: 68,
+    y: 28,
+    reviews: 56,
+  },
+  {
+    id: 5,
+    name: "Panadería La Porteña",
+    type: "Panadería",
+    address: "Perón 877",
+    distance: "620m",
+    rating: 4.7,
+    hours: "6:30 – 20:00",
+    isOpen: true,
+    amenities: [],
+    x: 72,
+    y: 62,
+    reviews: 33,
+    phone: "+54 11 4553-1020",
+  },
+  {
+    id: 6,
+    name: "Hotel Majestic",
+    type: "Hotel",
+    address: "Avenida de Mayo 1152",
+    distance: "820m",
+    rating: 4.3,
+    hours: "24 horas",
+    isOpen: true,
+    amenities: ["accessible", "gender-neutral", "baby-changing"],
+    x: 44,
+    y: 72,
+    reviews: 198,
+    phone: "+54 11 4300-7070",
+  },
+  {
+    id: 7,
+    name: "Café Tortoni",
+    type: "Café",
+    address: "Av. de Mayo 825",
+    distance: "950m",
+    rating: 4.9,
+    hours: "8:00 – 23:00",
+    isOpen: false,
+    amenities: ["accessible"],
+    x: 22,
+    y: 44,
+    reviews: 501,
+    phone: "+54 11 4342-4328",
+  },
+  {
+    id: 8,
+    name: "Banco Nación",
+    type: "Banco",
+    address: "Bartolomé Mitre 326",
+    distance: "1.1km",
+    rating: 3.9,
+    hours: "10:00 – 15:00",
+    isOpen: false,
+    amenities: ["accessible"],
+    x: 56,
+    y: 70,
+    reviews: 28,
+  },
+];
